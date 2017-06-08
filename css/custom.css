@@ -675,7 +675,7 @@ img.logo
 }
 .flex-direction-nav a, .flex-direction-nav a
 {
-	top: 50% !important;
+	top: 40% !important;
 	-webkit-transform: translateY(-50%);
 	   -moz-transform: translateY(-50%);
 	    -ms-transform: translateY(-50%);
