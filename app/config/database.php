@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'humboldt',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'inversor_humboldt',
+			'username'  => 'inversor_admin',
+			'password'  => 't1*eV#NCH?4z',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
