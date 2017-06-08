@@ -1,0 +1,68 @@
+<div class="filters-menu">
+	<div class="text-center">
+  	<a href="#!" class="collapsed waves waves-effect waves-dark" data-toggle="collapse" data-target="#fiter-container">
+  		<h3 class="text-center">
+  			<?php echo Lang::get('lang.filter'); ?> <i class="fa fa-plus"></i><i class="fa fa-minus"></i>
+  		</h3>
+  	</a>
+   </div> 
+	<div class="filter-container collapse" id="fiter-container">
+		<?php if(isset($self)): ?>
+			<form method="GET" action="<?php echo URL::to('ver-propiedad/buscar'); ?>" class="form-filter">
+		<?php else: ?>
+			<form method="GET" action="<?php echo URL::to(Request::url()); ?>" class="form-filter">
+		<?php endif; ?>
+		</form>
+		<div class="col-xs-12 input-field">
+			<label class="label-filter">Búsqueda</label>
+			<input type="text" name="busq" <?php if(isset($busq)): ?> value="<?php echo $busq; ?>" <?php endif; ?> class="filter-input">
+		</div>
+		<div class="col-xs-12 input-field">
+			<label class="label-filter select-label">Tipo de Propiedad</label>
+			<select class="material_select filter-input" name="cat" >
+				<option value="*">Todas</option>
+				<?php foreach($categories as $c): ?>
+					<option value="<?php echo $c->id; ?>" <?php if(isset($cat) && $cat == $c->id): ?> selected <?php endif; ?>><?php echo ucfirst($c->description); ?></option>
+				<?php endforeach; ?>
+			</select>
+		</div>
+		<div class="col-xs-12 input-field">
+			<label class="label-filter select-label">Operación</label>
+			<select class="material_select filter-input" name="operation">
+				<option value="*">Todas</option>
+				<?php foreach($operations as $o): ?>
+					<option value="<?php echo $o->id; ?>" <?php if(isset($operation) && $operation == $o->id): ?> selected <?php endif; ?>><?php echo ucfirst($o->description); ?></option>
+				<?php endforeach; ?>
+			</select>
+		</div>
+		<div class="col-xs-6 input-field">
+			<i class="fa fa-bed prefix postfix"></i>
+			<input type="number" name="rooms" placeholder="N°" <?php if(isset($rooms)): ?> value="<?php echo $rooms; ?>" <?php endif; ?> class="filter-input">
+		</div>
+		<div class="col-xs-6 input-field">
+			<i class="fa fa-bathtub prefix postfix"></i>
+			<input type="number" name="baths" placeholder="N°" <?php if(isset($baths)): ?> value="<?php echo $baths; ?>" <?php endif; ?> class="filter-input">
+		</div>
+		<div class="col-xs-6 input-field">
+			<i class="fa fa-automobile prefix postfix"></i>
+			<input type="number" name="park" placeholder="N°" <?php if(isset($park)): ?> value="<?php echo $park; ?>" <?php endif; ?> class="filter-input">
+		</div>
+		<div class="col-xs-6 input-field">
+			<i class="fa fa-tree prefix postfix"></i>
+			<input type="number" name="size" placeholder="N°" <?php if(isset($size)): ?> value="<?php echo $size; ?>" <?php endif; ?> class="filter-input">
+		</div>
+		<div class="col-xs-6 formulario input-field">
+			<label class="label-filter">Mínimo</label>
+			<input type="text" class="min filter-input" name="min" min="0" placeholder="Min:" <?php if(isset($min)): ?> value="<?php echo $min; ?>" <?php endif; ?> >
+		</div>
+		<div class="col-xs-6 formulario input-field">
+			<label class="label-filter">Máximo</label>
+			<input type="text" class="max filter-input" name="max" min="0" placeholder="Max:" <?php if(isset($max)): ?> value="<?php echo $max; ?>" <?php endif; ?>>
+		</div>
+
+		<div class="col-xs-12 formulario">
+			<button class="btn btn-default btn-xs btn-flat btn-filtralo waves waves-effect waves-dark" title="Filtrar">Filtrar <strong><i class="fa fa-angle-right"></i></strong></button>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>

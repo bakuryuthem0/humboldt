@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<table border="0" style="width:100%;">
+		<tr>
+			<td colspan="2">Mensaje de la pagina web</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+				De: <?php echo $name; ?>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Asunto: <?php echo $subject; ?>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<?php echo $msg; ?>
+
+			</td>
+		</tr>
+		<?php if(isset($link) && isset($pub_name)): ?>
+			<tr>
+				<td>
+					<a href="<?php echo $link; ?>"><?php echo $pub_name; ?></a>
+				</td>
+			</tr>
+		<?php endif; ?>
+	</table>
+</body>
+</html>

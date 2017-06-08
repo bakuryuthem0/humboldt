@@ -1,0 +1,9 @@
+<div class="box-img">
+	<a href="<?php echo URL::to('ver-propiedad/'.$pop->publication->id); ?>">
+		<img class="img-responsive" src="<?php echo asset('images/publications/'.$pop->publication->id.'/'.$pop->publication->images->first()->image); ?>" alt="<?php echo $pop->publication->title; ?>">
+	</a>
+</div>
+<div class="box-text">
+	<p><a href="<?php echo URL::to('ver-propiedad/'.$pop->publication->id); ?>"><?php echo $pop->publication->title; ?></a></p>
+	<a href="<?php echo URL::to('ver-propiedad/'.$pop->publication->id); ?>" class="in-box">Ver Propiedad</a>
+</div>
