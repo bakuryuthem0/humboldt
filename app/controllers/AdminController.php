@@ -209,38 +209,35 @@ class AdminController extends BaseController {
 
 		$rules = array(
 			'title' 		=> 'required|min:4|max:100',
-			'description'	=> 'required',
 		);
 		$msg = array();
 		$attr = array(
 			'title' 		=> 'titulo',
-			'description'	=> 'descripción'
 		);
 		$validator = Validator::make($data, $rules, $msg, $attr);
 		if ($validator->fails()) {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$questions = new Question;
-		$questions->title 		= $data['title'];
-		$questions->description = $data['description'];
-		$questions->save();
-		Session::flash('success','Se ha creado la pregunta frecuente satisfactoriamente.');
-		return Redirect::to('administracion/ver-preguntas-frecuentes'); 
+		$city = new City;
+		$city->title 		= $data['title'];
+		$city->save();
+		Session::flash('success','Se ha creado la ciudad satisfactoriamente.');
+		return Redirect::to('administracion/ver-ciudades'); 
 	}
 	public function getQuestions()
 	{
-		$questions = Question::get();
-		$title = "Ver Preguntas Frecuentes | Inversora Humboldt";
+		$questions = City::get();
+		$title = "Ver ciudades | Inversora Humboldt";
 		return View::make('admin.questions.show')
 		->with('title',$title)
 		->with('questions',$questions);
 	}
 	public function getMdfQuestion($id)
 	{
-		$question = Question::find($id);
+		$question = City::find($id);
 
-		$title = "Modificar pregunta frecuente | Inversora Humboldt";
+		$title = "Modificar ciudades | Inversora Humboldt";
 		return View::make('admin.questions.mdf')
 		->with('title',$title)
 		->with('question',$question);
@@ -251,22 +248,19 @@ class AdminController extends BaseController {
 
 		$rules = array(
 			'title' 		=> 'required|min:4|max:100',
-			'description'	=> 'required',
 		);
 		$msg = array();
 		$attr = array(
 			'title' 		=> 'titulo',
-			'description'	=> 'descripción'
 		);
 		$validator = Validator::make($data, $rules, $msg, $attr);
 		if ($validator->fails()) {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$questions = Question::find($id);
-		$questions->title 		= $data['title'];
-		$questions->description = $data['description'];
-		$questions->save();
+		$city = City::find($id);
+		$city->title 		= $data['title'];
+		$city->save();
 		Session::flash('success','Se ha modificado la pregunta frecuente satisfactoriamente.');
 		return Redirect::back(); 
 	}
@@ -284,7 +278,7 @@ class AdminController extends BaseController {
 			));
 		}
 		$id = Input::get('id');
-		Question::find($id)->delete();
+		City::find($id)->delete();
 		return Response::json(array(
 			'type' => 'success',
 			'msg'  => 'Se ha eliminado la pregunta frecuente satisfactoriamente.'

@@ -27,7 +27,6 @@
                         <tr>
                           <th>Id</th>
                           <th>Titulo</th>
-                          <th>Ver Descripción</th>
                           <th>Modificar</th>
                           <th>Eliminar</th>
                         </tr>
@@ -37,14 +36,11 @@
                        <tr>
                        	<td>{{ $q->id }}</td>
                        	<td>{{ $q->title }}</td>
-                        <td>
-                          <button class="btn btn-info btn-xs show-question-info" value="{{ $q->description }}" data-toggle="modal" data-target="#showDescription">Ver</button>
+                       	<td>
+                          <a href="{{ URL::to('administracion/ciudades/modificar/'.$q->id) }}" target="_blank" class="btn btn-warning btn-xs">Modificar</a>
                         </td>
                        	<td>
-                          <a href="{{ URL::to('administracion/preguntas-frecuentes/modificar/'.$q->id) }}" target="_blank" class="btn btn-warning btn-xs">Modificar</a>
-                        </td>
-                       	<td>
-                          <button class="btn btn-danger btn-xs btn-elim-publication" value="{{ $q->id}}" data-toggle="modal" data-target="#elimThing" data-url="{{ URL::to('administracion/preguntas-frecuentes/eliminar') }}" data-tosend="id">Eliminar</button>
+                          <button class="btn btn-danger btn-xs btn-elim-publication" value="{{ $q->id}}" data-toggle="modal" data-target="#elimThing" data-url="{{ URL::to('administracion/ciudades/eliminar') }}" data-tosend="id">Eliminar</button>
                         </td>
                        </tr>
                        @endforeach
@@ -53,7 +49,6 @@
                         <tr>
                           <th>Id</th>
                           <th>Titulo</th>
-                          <th>Ver Descripción</th>
                           <th>Modificar</th>
                           <th>Eliminar</th>
                         </tr>
@@ -66,22 +61,7 @@
 
   	</div><!-- /.content-wrapper -->
 </div>  
-<div class="modal fade" id="showDescription">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Descripción</h4>
-      </div>
-      <div class="modal-body description text-justify">
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 {{ View::make('partials.modalElim') }}
 {{ Form::token() }}
 @stop

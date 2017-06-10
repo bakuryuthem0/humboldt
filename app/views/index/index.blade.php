@@ -35,13 +35,22 @@
 					</div>
 				</div>
 				<div class="header-bottom">
-					<i class="fa fa-times btn btn-flat close-filter"></i>
+					<i class="fa fa-times btn btn-flat close-filter hidden-lg hidden-md"></i>
 					<form action="{{ URL::to('ver-propiedad/buscar') }}" method="GET" class="filter-form">
 					</form>
 
-					<div class="col-xs-12 col-sm-6 col-md-4 input-field">
+					<div class="col-xs-12 col-sm-3 col-md-2 input-field">
 						<i class="fa fa-search prefix postfix"></i>
 						<input type="text" name="busq" class="browser-default filter-input" placeholder="Palabras Claves">
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-2 input-field">
+						<i class="fa fa-map-marker prefix postfix"  data-toggle="popover" data-trigger="hover" data-content="Ciudad" data-placement="top" data-html="true"></i>
+						<select class="form-control browser-default filter-input" name="city">
+							<option value="*">Todas</option>
+							@foreach($cities as $c)
+								<option value="{{ $c->id }}">{{ ucfirst($c->title) }}</option>
+							@endforeach
+						</select>
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-2 input-field">
 						<i class="fa fa-building-o prefix postfix"  data-toggle="popover" data-trigger="hover" data-content="Tipo de Propiedad" data-placement="top" data-html="true"></i>

@@ -31,7 +31,7 @@
                      <div class="col-xs-12">
                         <h3>Datos básicos.</h3>
                      </div>
-                     <div class="formulario col-xs-12">
+                     <div class="formulario col-xs-12 col-md-6">
                          <label class="item-label">Código de la propiedad. (*)</label>
                          <input type="text" class="form-control" name="publication_cod" placeholder="Código de la propiedad" value="{{ $publication->publication_cod }}" required>
                          @if($errors->has('publication_cod'))
@@ -43,6 +43,24 @@
                             </div>
                             @endforeach
                           @endif
+                     </div>
+                     <div class="formulario col-xs-12 col-md-6">
+                        <label class="item-label">Ciudad. (*)</label>
+                        <select class="form-control" name="city">
+                          <option value="">Seleccione una opción</option>
+                          @foreach($city as $c)
+                             <option value="{{ $c->id }}" @if(Input::old('city') && Input::old('city') == $c->id) selected @endif>{{ $c->title }}</option>
+                          @endforeach
+                        </select>
+                       @if($errors->has('city'))
+                          @foreach($errors->get('city') as $err)
+                          <div class="clearfix"></div>
+                          <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ $err }}
+                          </div>
+                       @endforeach
+                     @endif
                      </div>
                      <div class="formulario col-xs-12 col-md-6">
                          <label class="item-label">Título. (*)</label>

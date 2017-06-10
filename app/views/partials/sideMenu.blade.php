@@ -18,6 +18,15 @@
 			<input type="text" name="busq" @if(isset($busq)) value="{{ $busq }}" @endif class="filter-input">
 		</div>
 		<div class="col-xs-12 input-field">
+			<label class="label-filter select-label">Ciudad</label>
+			<select class="material_select filter-input" name="city" >
+				<option value="*">Todas</option>
+				@foreach($cities as $c)
+					<option value="{{ $c->id }}" @if(isset($city) && $city == $c->id) selected @endif>{{ ucfirst($c->title) }}</option>
+				@endforeach
+			</select>
+		</div>
+		<div class="col-xs-12 input-field">
 			<label class="label-filter select-label">Tipo de Propiedad</label>
 			<select class="material_select filter-input" name="cat" >
 				<option value="*">Todas</option>

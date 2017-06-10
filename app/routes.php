@@ -57,10 +57,10 @@ Route::group(array("before" => "auth"),function(){
 	//contacto
 	Route::get('administracion/contacto/ver-contacto','ContactController@getContact');
 	Route::get('administracion/contacto/ver-lista','ContactController@getUserEmails');
-	//preguntas frecuentes
-	Route::get('administracion/preguntas-frecuentes/nueva','AdminController@getNewFrequentQuestion');
-	Route::get('administracion/ver-preguntas-frecuentes','AdminController@getQuestions');
-	Route::get('administracion/preguntas-frecuentes/modificar/{id}','AdminController@getMdfQuestion');
+	//ciudades
+	Route::get('administracion/ciudades/nueva','AdminController@getNewFrequentQuestion');
+	Route::get('administracion/ver-ciudades','AdminController@getQuestions');
+	Route::get('administracion/ciudades/modificar/{id}','AdminController@getMdfQuestion');
 	Route::group(array('before' => 'csrf'), function(){
 		//perfil
 		Route::post('administracion/usuario/perfil/cambiar-contrasena/enviar','UserController@postAdminPass');
@@ -86,10 +86,10 @@ Route::group(array("before" => "auth"),function(){
 		Route::post('administracion/publicidad/nueva/enviar','PublicityController@postPublicity');
 		Route::post('administracion/publicidad/modificar/{id}/enviar','PublicityController@postMdfPub');
 		Route::post('administracion/ver-publicidad/eliminar','PublicityController@postPublicityElim');
-		//preguntas frecuentes
-		Route::post('administracion/pregunta-frecuente/nueva/enviar','AdminController@postNewFrequentQuestion');
-		Route::post('administracion/preguntas-frecuentes/modificar/{id}/enviar','AdminController@postMdfQuestion');
-		Route::post('administracion/preguntas-frecuentes/eliminar','AdminController@postElimQuestion');
+		//ciudades
+		Route::post('administracion/ciudades/nueva/enviar','AdminController@postNewFrequentQuestion');
+		Route::post('administracion/ciudades/modificar/{id}/enviar','AdminController@postMdfQuestion');
+		Route::post('administracion/ciudades/eliminar','AdminController@postElimQuestion');
 
 
 	});

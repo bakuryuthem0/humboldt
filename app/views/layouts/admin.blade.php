@@ -151,11 +151,11 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-question-circle"></i>
-                <span>Preguntas Frecuentes</span>
+                <span>Ciudades</span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{ URL::to('administracion/preguntas-frecuentes/nueva') }}"><i class="fa fa-circle-o"></i> Nueva Pregunta Frecuente</a></li>
-                <li><a href="{{ URL::to('administracion/ver-preguntas-frecuentes') }}"><i class="fa fa-circle-o"></i> Ver Preguntas Frecuentes</a></li>
+                <li><a href="{{ URL::to('administracion/ciudades/nueva') }}"><i class="fa fa-circle-o"></i> Nuevo Ciudad</a></li>
+                <li><a href="{{ URL::to('administracion/ver-ciudades') }}"><i class="fa fa-circle-o"></i> Ver Ciudades</a></li>
               </ul>
             </li>
             <li class="treeview">

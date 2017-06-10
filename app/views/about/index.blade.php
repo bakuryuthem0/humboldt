@@ -28,7 +28,7 @@
 			<div class="col-md-8 about-mid">
 				<h4>Nuestra misión</h4>
 				<p class="text-justify">
-					Proporcionar un Servicio Inmobiliario de la más alta calidad, teniendo como aspiración fundamental la satisfacción del cliente. El único parámetro que aceptaremos para medir este objetivo es la decisión del cliente y solo cuando demos más de lo que el cliente esperaba consideraremos cumplida nuestra misión. Debemos rebasar las expectativas de nuestros clientes y cumplir lo que prometemos, solo así podremos afirmar que somos congruentes con la filosofía de la empresa y que estamos cumpliendo con nuestra misión comercial. Dicho de otra forma, nuestra filosofía de empresa es la de producir siempre clientes satisfechos, éste es nuestro negocio y al lograrlo estaremos haciendo 
+					Nuestra misión es proporcionar un Servicio Inmobiliario de la más alta calidad, teniendo como aspiración fundamental la satisfacción del cliente. El único parámetro que aceptaremos para medir este objetivo es la decisión del cliente y solo cuando demos más de lo que el cliente esperaba consideraremos cumplida nuestra misión. Debemos rebasar las expectativas de nuestros clientes y cumplir lo que prometemos, solo así podremos afirmar que somos congruentes con la filosofía de la empresa y que estamos cumpliendo con nuestra misión comercial. Dicho de otra forma, nuestra filosofía de empresa es la de producir siempre clientes satisfechos, éste es nuestro negocio y al lograrlo estaremos haciendo.<strong>CLIENTES DE POR VIDA.</strong>
 				</p>
 				<br>
 			</div>

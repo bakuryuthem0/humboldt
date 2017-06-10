@@ -17,4 +17,8 @@ class Publication extends Eloquent {
 	{
 		return $this->hasMany('PublicationImage','publication_id');
 	}
+	public function city()
+	{
+		return $this->belongsTo('City','city_id');
+	}
 }

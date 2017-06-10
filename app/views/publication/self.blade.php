@@ -56,6 +56,12 @@
 						<p class="text-left">Precio</p>
 						<p class="pull-right">{{ $publication->price }}BsF</p>
 					</div>
+					@if(!is_null($publication->city))
+					<div class="col-xs-12">
+						<p class="text-left">Ciudad</p>
+						<p class="pull-right">{{ $publication->city->title }}</p>
+					</div>
+					@endif
 					<div class="col-xs-12 right-side item-description">
 						<a href="#contactModal" class="hvr-sweep-to-right more waves waves-effect waves-light modal-trigger" >Contactar</a>
 					</div>

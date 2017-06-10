@@ -25,12 +25,12 @@
 			  	 <address class="text-justify">
 			  	 	<p><b>Inversora Hulbodt-0311 C.A.</b></p>
 					<p>Urb/Sector: Los Palos Grandes</p>
-					<p>Dirección: Av. Francisco de Miranda, entre Av. 2 y 3, Torre Seguros Caracas de Liberty Mutual, Los Palos Grandes, Caracas.</p>
+					<p>Direccion: Av. Luis Roche con Francisco de Miranda, Edificio Humboldt, piso 3- ofc.11, Urbanizacion Altamira- Caracas.</p>
 
 			  	 </address>
 		  	</div>
 		  	<div class="col-md-6 contact-address1">
-			  	  <h5>Dirección de Email</h5>
+			  	 <h5>Dirección de Email</h5>
 	             <p>General :<a href="inversorahumboldt@gmail.com"> inversorahumboldt@gmail.com</a></p>
 		  	</div>
 		  	<div class="clearfix"></div>
@@ -38,7 +38,7 @@
 		  <div class="contact-address">
 		  	<div class="col-md-6 contact-address1">
 			  	 <h5 >Telefono </h5>
-	             <p>Local : (0212) 266-97-48</p>
+	             <p>Local : (0212) 266-94-48</p>
 	        </div>
 		  	<div class="clearfix"></div>
 		  </div>

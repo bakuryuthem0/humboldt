@@ -14,6 +14,7 @@ class PublicationController extends BaseController {
 	}
 	public $publications_rules = array(
 		'title'	    		=> 'required|min:4|max:100',
+		'city'				=> 'required|exists:cities,id',
 		'category'			=> 'required|exists:categorias,id',
 		'operation'			=> 'required|exists:operations,id',
 		'price'				=> 'required|numeric',
@@ -25,6 +26,7 @@ class PublicationController extends BaseController {
 	);
 	public $publications_attr = array(
 		'title'				=> 'titulo',
+		'city'				=> 'ciudad',
 		'category'			=> 'categoría',
 		'operation'			=> 'tipo de operación',
 		'price'   			=> 'precio',
@@ -39,6 +41,7 @@ class PublicationController extends BaseController {
 	{
 		$publication->publication_cod = $data['publication_cod'];
 		$publication->title    		  = $data['title'];
+		$publication->city_id    	  = $data['city'];
 		$publication->category_id  	  = $data['category'];
 		$publication->operation_id 	  = $data['operation'];
 		$publication->price   	      = $data['price'];
@@ -69,6 +72,11 @@ class PublicationController extends BaseController {
 			$paginatorFilter .= '&busq='.$data['busq'];
 			$sideBar = $sideBar->with('busq',$data['busq']);
 			$view = $view->with('busq',$data['busq']);
+		}
+		if (Input::has('city') && Input::get('city') != "*") {
+			$publication = $publication->where('city_id','=',$data['city']);
+			$paginatorFilter .= '&city='.$data['city'];
+			$sideBar = $sideBar->with('city',$data['city']);
 		}
 		if (Input::has('cat') && Input::get('cat') != "*") {
 			$publication = $publication->where('category_id','=',$data['cat']);
@@ -170,9 +178,11 @@ class PublicationController extends BaseController {
 		$title 		= "Nuevo Publicación | Inversora Humboldt, venta, alquiler y remodelaciones de bienes raices.";
 		$operations = Operation::get();
 		$cat   		= Categoria::get();
+		$city   	= City::get();
 		return View::make('admin.publications.new')
 		->with('title',$title)
 		->with('cat',$cat)
+		->with('city',$city)
 		->with('operations',$operations);
 	}
 	public function postNewPub()
@@ -375,6 +385,7 @@ class PublicationController extends BaseController {
 		->with('images')
 		->with('operation')
 		->with('category')
+		->with('city')
 		->find($id);
 		$related = Publication::where(function($query) use($publication){
 			$query->where(function($price) use($publication){
@@ -405,6 +416,7 @@ class PublicationController extends BaseController {
 		$publicity = Publicity::where('ubication','=',3)->get();
 		$categories = Categoria::get();
 		$operations = Operation::get();
+		$cities 	= City::get();
 		$sideBar = View::make('partials.sideMenu');
 
 		return View::make('publication.self')
@@ -412,7 +424,7 @@ class PublicationController extends BaseController {
 		->with('publication',$publication)
 		->with('related',$related)
 		->with('populars',$populars)
-		->with('sideBar',$sideBar->with('categories',$categories)->with('operations',$operations)->with('self','self'))
+		->with('sideBar',$sideBar->with('categories',$categories)->with('operations',$operations)->with('cities',$cities)->with('self','self'))
 		->with('publicity',$publicity);
 	}
 	public function getSearch($subdomain = null)
@@ -431,6 +443,7 @@ class PublicationController extends BaseController {
 		$populars 	= CommonTask::getPopulars();
 		$categories = Categoria::get();
 		$operations = Operation::get();
+		$cities     = City::get();
 		$paginatorFilter = '';
 
 		$title    = "Búsqueda | Inversora Humboldt, venta, alquiler y remodelaciones de bienes raices.";
@@ -446,6 +459,6 @@ class PublicationController extends BaseController {
 		return $view->with('publications',$publications)
 		->with('paginatorFilter',$paginatorFilter)
 		->with('publicity',$publicity)
-		->with('sideBar',$sideBar->with('categories',$categories)->with('operations',$operations));
+		->with('sideBar',$sideBar->with('categories',$categories)->with('operations',$operations)->with('cities',$cities));
 	}
 }

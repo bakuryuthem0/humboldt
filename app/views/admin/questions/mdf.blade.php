@@ -10,7 +10,7 @@
           </h1>
           <ol class="breadcrumb">
             <li class=""><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active"><a href="#"><i class="fa fa-question-circle"></i> Nueva Pregunta Frecuente</a></li>
+            <li class="active"><a href="#"><i class="fa fa-question-circle"></i> Modificar Ciudad</a></li>
           </ol>
         </section>
         <div class="row">
@@ -18,7 +18,7 @@
               <div class="box box-success">
                 <div class="box-header">
                   <i class="fa fa-question-circle"></i>
-                  <h3 class="box-title">Nueva Pregunta Frecuente</h3>
+                  <h3 class="box-title">Modificar Ciudad</h3>
                 </div>
                 <div class="box-body chat" id="chat-box">
                   @if(Session::has('success'))
@@ -27,7 +27,7 @@
                     {{ Session::get('success') }}
                   </div>
                   @endif
-                  <form class="new-user-form row" method="POST" action="{{ URL::to('administracion/preguntas-frecuentes/modificar/'.$question->id.'/enviar') }}" enctype="multipart/form-data"> 
+                  <form class="new-user-form row" method="POST" action="{{ URL::to('administracion/ciudades/modificar/'.$question->id.'/enviar') }}" enctype="multipart/form-data"> 
                      <div class="formulario col-xs-12">
                          <label class="item-label">Título. (*)</label>
                          <input type="text" class="form-control" name="title" placeholder="Título" value="{{ $question->title }}" required>
@@ -40,21 +40,6 @@
                             </div>
                             @endforeach
                           @endif
-                     </div>
-                     <div class="col-xs-12 formulario">
-                        <label>Descripción. (*)</label>
-                        <textarea class="form-control validate-input" id="editor1" name="description" rows="10" cols="80">
-                           {{$question->description }}
-                        </textarea>
-                        @if($errors->has('description'))
-                           @foreach($errors->get('description') as $err)
-                           <div class="clearfix"></div>
-                           <div class="alert alert-danger">
-                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                             {{ $err }}
-                           </div>
-                           @endforeach
-                        @endif
                      </div>
                      
                      {{ Form::token() }}

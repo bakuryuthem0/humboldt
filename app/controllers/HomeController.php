@@ -21,6 +21,7 @@ class HomeController extends BaseController {
 		$slides 		= Slide::get(); 
 		$categories		= Categoria::get();
 		$operations		= Operation::get();
+		$cities         = City::get();
 		$publications   = Publication::with('images')
 		->with('misc')
 		->with('operation')
@@ -45,6 +46,7 @@ class HomeController extends BaseController {
 		->with('publications',$publications)
 		->with('populars',$populars)
 		->with('publicity',$publicity)
+		->with('cities',$cities)
 		->with('home','home');
 	}
 	public function getAbout()
