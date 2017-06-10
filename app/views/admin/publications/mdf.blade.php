@@ -48,8 +48,8 @@
                         <label class="item-label">Ciudad. (*)</label>
                         <select class="form-control" name="city">
                           <option value="">Seleccione una opción</option>
-                          @foreach($city as $c)
-                             <option value="{{ $c->id }}" @if(Input::old('city') && Input::old('city') == $c->id) selected @endif>{{ $c->title }}</option>
+                          @foreach($cities as $c)
+                             <option value="{{ $c->id }}" @if(!is_null($publication->city) && $publication->city_id == $c->id) selected @endif>{{ $c->title }}</option>
                           @endforeach
                         </select>
                        @if($errors->has('city'))
