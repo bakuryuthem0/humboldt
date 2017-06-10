@@ -23,7 +23,7 @@ class PublicityController extends BaseController {
 		{
 			$slide->show_title = 0;
 		}
-		if (Input::hasFile('imag')) {
+		if (Input::hasFile('image')) {
 			$file = Input::file('image');
 			$slide->image     = ImageController::upload_image($file,$file->getClientOriginalName(),'images/slides/');
 		}
