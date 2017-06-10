@@ -271,9 +271,11 @@ class PublicationController extends BaseController {
 		->find($id);
 		$operations = Operation::get();
 		$cat   		= Categoria::get();
+		$cities   	= City::get();
 		return View::make('admin.publications.mdf')
 		->with('title',$title)
 		->with('cat',$cat)
+		->with('cities',$cities)
 		->with('operations',$operations)
 		->with('publication',$publication);
 	}
