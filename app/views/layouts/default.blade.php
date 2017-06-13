@@ -107,9 +107,10 @@
 			
 			<div class="col-md-3 amet-sed">
 				<h4>Atención al cliente</h4>
-				<p>Lun-Vier, 8:30 am a 12:00 pm y de 1:00 a 3:30 pm. </p>
+				<p>Lun-Vie, 8:30 am a 12:00 pm y de 1:00 a 3:30 pm. </p>
 				<p>Local (0212) 266-94-48</p>
 				<p>Celular (0414) 590-71-78</p>
+				<p>General :<a href="inversorahumboldt@gmail.com"> inversorahumboldt@gmail.com</a></p>
 				<p>Direccion: Av. Luis Roche con Francisco de Miranda, Edificio Humboldt, piso 3- ofc.11, Urbanizacion Altamira- Caracas.</p>
 				<ul class="nav-bottom">
 					<li><a href="{{ URL::to('contactenos') }}">Contáctenos.</a></li>

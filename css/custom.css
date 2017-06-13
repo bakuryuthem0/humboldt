@@ -639,6 +639,10 @@ img.logo
 {
 	width: 50%;
 }
+.navigation .container-fluid li a:hover
+{
+	color: #333;
+}
 .navigation .container-fluid .menu-logo-container .logo
 {
 	width: 30%;

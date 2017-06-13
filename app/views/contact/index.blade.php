@@ -14,7 +14,7 @@
 <!--contact-->
 <div class="contact">
 	<div class="wrapper">
-		<h3>Contato</h3>
+		<h3>Contacto</h3>
 	 <div class="contact-top">
 		<div class="col-md-6 contact-top1">
 		  <h4 > Información</h4>
@@ -37,7 +37,7 @@
 		  </div>
 		  <div class="contact-address">
 		  	<div class="col-md-6 contact-address1">
-			  	 <h5 >Telefono </h5>
+			  	 <h5 >Teléfono </h5>
 	             <p>Local : (0212) 266-94-48</p>
 	        </div>
 		  	<div class="clearfix"></div>
