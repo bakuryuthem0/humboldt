@@ -4,7 +4,7 @@
 <!--//-->
 <div class="banner-top">
 	<div class="wrapper full-height">
-		<div class="valign-wrapper"><h3 class="center-block">Politicas de Privacidad</h3></div>
+		<div class="valign-wrapper"><h3 class="center-block">Políticas de Privacidad</h3></div>
 		<!---->
 		<div class="clearfix"> </div>
 	</div>

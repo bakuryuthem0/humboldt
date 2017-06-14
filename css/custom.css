@@ -357,6 +357,12 @@ a.mask > img
 {
 	padding-top: 3em;
 }
+@media(min-width: 991px){
+	.item-description
+	{
+		height: 250px;
+	}	
+}
 .item-description a.more
 {
 	color: #333;

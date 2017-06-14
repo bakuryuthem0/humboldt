@@ -93,11 +93,11 @@
 						<button class="btn waves waves-effect waves-light btn-search-filter " type="button">Buscar</button>
 						<button class="btn btn-flat waves waves-effect waves-light pull-right visible-xs close-filter white" type="button">Cerrar</button>
 						<div class="col-xs-12 col-md-6 pull-right">
-							<div class="range-text min">30000</div>
+							<div class="range-text min">0</div>
 							<div class="range-text">BsF - </div>
 							<div class="range-text max">1000000</div>
 							<div class="range-text">BsF</div>
-							<input type="hidden" name="min" class="min filter-input" value="30000">
+							<input type="hidden" name="min" class="min filter-input" value="0">
 							<input type="hidden" name="max" class="max filter-input"value="1000000">
 						</div>
 					</div>

@@ -101,7 +101,7 @@
 				<ul class="nav-bottom">
 					<li><a href="{{ URL::to('acerca-de-nosotros') }}">Acerca de nosotros</a></li>
 					<li><a href="{{ URL::to('ver-propiedad/buscar') }}">Ver Propiedades</a></li>
-					<li><a href="{{ URL::to('politicas-de-privacidad') }}">Politicas de Privacidad</a></li>
+					<li><a href="{{ URL::to('politicas-de-privacidad') }}">Políticas de Privacidad</a></li>
 				</ul>
 			</div>
 			
@@ -111,7 +111,7 @@
 				<p>Local (0212) 266-94-48</p>
 				<p>Celular (0414) 590-71-78</p>
 				<p>General :<a href="inversorahumboldt@gmail.com"> inversorahumboldt@gmail.com</a></p>
-				<p>Direccion: Av. Luis Roche con Francisco de Miranda, Edificio Humboldt, piso 3- ofc.11, Urbanizacion Altamira- Caracas.</p>
+				<p>Dirección: Av. Luis Roche con Francisco de Miranda, Edificio Humboldt, piso 3- ofc.11, Urbanización Altamira- Caracas.</p>
 				<ul class="nav-bottom">
 					<li><a href="{{ URL::to('contactenos') }}">Contáctenos.</a></li>
 				</ul>

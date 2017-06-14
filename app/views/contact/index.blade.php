@@ -25,7 +25,7 @@
 			  	 <address class="text-justify">
 			  	 	<p><b>Inversora Hulbodt-0311 C.A.</b></p>
 					<p>Urb/Sector: Los Palos Grandes</p>
-					<p>Direccion: Av. Luis Roche con Francisco de Miranda, Edificio Humboldt, piso 3- ofc.11, Urbanizacion Altamira- Caracas.</p>
+					<p>Dirección: Av. Luis Roche con Francisco de Miranda, Edificio Humboldt, piso 3- ofc.11, Urbanización Altamira- Caracas.</p>
 
 			  	 </address>
 		  	</div>
