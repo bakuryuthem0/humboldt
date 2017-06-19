@@ -124,11 +124,8 @@
 					@endforeach
 				</ul>
 				<ul class="social">
-					<li><a href="#"><i> </i></a></li>
-					<li><a href="#"><i class="gmail"> </i></a></li>
-					<li><a href="#"><i class="twitter"> </i></a></li>
-					<li><a href="#"><i class="camera"> </i></a></li>
-					<li><a href="#"><i class="dribble"> </i></a></li>
+					<li><a target="_blank" href="https://www.facebook.com/profile.php?id=100017731064775"><i> </i></a></li>
+					<li><a target="_blank" href="https://www.instagram.com/inversorahumboldt/?hl=es"><i class="camera"> </i></a></li>
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
