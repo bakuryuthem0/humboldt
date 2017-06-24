@@ -647,7 +647,7 @@ img.logo
 }
 .navigation .container-fluid li a:hover
 {
-	color: #333;
+	color: #333 !important;
 }
 .navigation .container-fluid .menu-logo-container .logo
 {
