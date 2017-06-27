@@ -26,6 +26,7 @@ class HomeController extends BaseController {
 		->with('misc')
 		->with('operation')
 		->take(12)
+		->orderBy('id','DESC')
 		->get();
 		$populars = Contact::with(array('publication' => function($publication){
 			$publication

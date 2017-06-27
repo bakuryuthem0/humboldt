@@ -165,12 +165,12 @@ class PublicationController extends BaseController {
 		if(Input::has('paginate_number'))
 		{
 			$int = Input::get('paginate_number');
-			$publication = $publication->paginate($int);
+			$publication = $publication->orderBy('id','DESC')->paginate($int);
 			$view = $view->with('paginate_number',$int);
 			$paginatorFilter .= '&paginate_number='.$int;
 		}else
 		{
-			$publication = $publication->paginate(6);
+			$publication = $publication->orderBy('id','DESC')->paginate(6);
 		}	
 	}
 	public function getNewPublication()
